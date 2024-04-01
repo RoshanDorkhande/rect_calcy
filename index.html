@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #D9AFD9;
+        background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+        height: 100vh;
+
+    }
+
+    .title{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .container{
+        
+        width : 400px;
+        background-color: #8BC6EC;
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        margin: 0 auto;
+        padding: 10px;
+        display: block;
+    }
+
+    .number-input{
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .answer{
+        text-align: center;
+    }
+    
+    .calculate{
+        display: block;
+        margin: 10px auto;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: #97D9E1;
+    }
+</style>
+<body>
+    
+    <h1 class="title"> Area Of Rectangle</h1>
+
+    <div class="container">
+
+        <input type="text" placeholder="Enter Length" class="number-input" id="num1">
+        <input type="text" placeholder="Enter Breadth" class="number-input" id="num2">
+
+        <p class="answer" id="ans">
+    
+        </p>
+
+        <button type="button" class="calculate" onclick="calculate()">
+            calculate
+        </button>
+    </div>
+
+
+    <script>
+        function calculate(){
+
+            const input1 = document.getElementById("num1");
+            const input2 = document.getElementById("num2");
+            
+            const display = document.getElementById("ans")
+
+            const ans = parseInt(input1.value) * parseInt(input2.value);
+
+            display.innerText = `Answer: ${ans}`;
+
+
+        }
+    </script>
+</body>
+</html>
